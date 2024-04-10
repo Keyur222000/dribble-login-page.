@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="email.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="header-left">
+                <ul>
+                    <li><a href="#">Inspiration</a></li>
+                    <li><a href="#">Find Work</a></li>
+                    <li><a href="#">Learn Design</a></li>
+                    <li><a href="#">Go Pro</a></li>
+                    <li><a href="#">Hire Designer</a></li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button id="searchButton">Search</button>
+                <a href="#" id="profileLink">Profile</a>
+                <button><a href="#" id="uploadLink">Upload</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="email-verification-container">
+        <h1>Please verify your email</h1>
+        <div class="email-icon">
+            <!-- Simple email icon using CSS -->
+            📧
+        </div>
+        <p>Please verify your email address. We've sent a confirmation email to:</p>
+        <p class="email-address">account123@gmail.com</p>
+        <p>Click the confirmation link in that email to begin using Dribbble.</p>
+        <p>Didn't receive the email? Check your spam folder, it may have been caught by a filter. If you still don't see it, you can <a href="#">resend the confirmation email</a>.</p>
+        <p>Wrong email address? <a href="#">Change it</a>.</p>
+    </div>
+
+    <script src="email.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Profile</title>
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+<h2>Welcome! Let's create your profile</h2>
+
+<p>Let others get to know you better! You can do this later.</p>
+
+
+<form id="profileForm">
+    <div class="image-profile">
+        <label for="profilePicture">
+            <h2>Add an avatar</h2>
+        </label>
+        <div class="photo-input">
+            
+        <div id="imagePreview">
+            <i class="fa fa-camera"></i>
+        </div>
+        <input type="file" id="profilePicture" name="profilePicture" accept="image/*"> 
+        
+    </div>
+    </div>
+
+    <label for="country">
+        <h2>Add your location</h2>
+    </label>
+    <input list="countries" id="country" name="country" placeholder="Select or type...">
+    
+    <datalist id="countries">
+        <!--                    Example countries - you can add more or fetch them from a database/API -->
+        <option value="United States"></option>
+        <option value="Canada"></option>
+        <option value="United Kingdom"></option>
+        <option value="Australia"></option>
+        <option value="India"></option>
+        <option value="Germany"></option>
+        <option value="France"></option>
+        <option value="Japan"></option>
+        <option value="Brazil"></option>
+        <option value="South Korea"></option>
+        <!--                         Add other countries as needed  -->
+    </datalist>
+
+    <button type="submit"><a href="reason.html">Continue</a></button>
+
+    
+
+</form>
+<script>
+   function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var img = document.createElement('img');
+        img.src = reader.result;
+        
+        var container = document.querySelector('.image-upload-container');
+        container.innerHTML = ''; // Remove the icon or any existing image
+        container.appendChild(img); // Add the new image
+    }
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+</script>
+
+</body>
+</html>
